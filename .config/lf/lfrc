@@ -1,7 +1,6 @@
 # -------------------------------------------------------- #
 # ------------------ Custom Functions -------------------- #
 # -------------------------------------------------------- #
-
 cmd mkdir ${{
   printf "Directory Name: "
   read ans
@@ -38,44 +37,9 @@ cmd save-lwd ${{
   pwd > ~/.config/lf/lf-lwd
 }}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # -------------------------------------------------------- #
 # -------------------- Basic Options --------------------- #
 # -------------------------------------------------------- #
-
 # Always show hidden directories and files
 set hidden on
 
@@ -103,20 +67,15 @@ set wrapscan on
 # Allow scrolling to wrap around the file list
 set wrapscroll on
 
-
-
-
 # -------------------------------------------------------- #
 # -------------------- Image Previews -------------------- #
 # -------------------------------------------------------- #
-
-# set previewer ~/.config/lf/lf_kitty_preview
-# set cleaner ~/.config/lf/lf_kitty_clean
+# set previewer ~/.config/lf/lf-kitty-preview
+# set cleaner ~/.config/lf/lf-kitty-clean
 
 # -------------------------------------------------------- #
 # ------------------ Custom Keybindings ------------------ #
 # -------------------------------------------------------- #
-
 # unregister some bindings
 map d
 map m
@@ -136,8 +95,6 @@ map zz unarchive
 map x cut
 map c copy
 map v paste
-
-
 
 # navigations
 map gh cd ~
