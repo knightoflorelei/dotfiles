@@ -1,0 +1,149 @@
+# -------------------------------------------------------- #
+# ------------------ Custom Functions -------------------- #
+# -------------------------------------------------------- #
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  touch $ans
+}}
+
+cmd unarchive ${{
+  case "$f" in
+      *.zip)
+      unzip "$f"
+      ;;
+      *.tar.gz)
+      tar -xzvf "$f"
+      ;;
+      *.tar.bz2)
+      tar -xjvf "$f"
+      ;;
+      *.tar)
+      tar -xvf "$f"
+      ;;
+      *)
+      echo "Unsupported format!"
+      ;;
+  esac
+}}
+
+cmd save-lwd ${{
+  pwd > ~/.config/lf/lf-lwd
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# -------------------------------------------------------- #
+# -------------------- Basic Options --------------------- #
+# -------------------------------------------------------- #
+
+# Always show hidden directories and files
+set hidden on
+
+# Always show icons
+set icons
+
+# Ignore case for search and sorting
+set ignorecase on
+
+# Ignore diacritics for search and sorting
+set ignoredia on
+
+# Set column ratios
+set ratios 2:5
+
+# Set what information is shown besides file/folder names
+set info size:time
+
+# Set character used when truncating file/folder names
+set truncatechar …
+
+# Allow search to wrap around the file list
+set wrapscan on
+
+# Allow scrolling to wrap around the file list
+set wrapscroll on
+
+
+
+
+# -------------------------------------------------------- #
+# -------------------- Image Previews -------------------- #
+# -------------------------------------------------------- #
+
+# set previewer ~/.config/lf/lf_kitty_preview
+# set cleaner ~/.config/lf/lf_kitty_clean
+
+# -------------------------------------------------------- #
+# ------------------ Custom Keybindings ------------------ #
+# -------------------------------------------------------- #
+
+# unregister some bindings
+map d
+map m
+map o
+map n
+map y
+map p
+map w
+
+# basic functions
+map q :save-lwd; quit
+map dd delete
+map mf mkfile
+map md mkdir
+map <enter> open
+map zz unarchive
+map x cut
+map c copy
+map v paste
+
+
+
+# navigations
+map gh cd ~
+map gd cd ~/Documents
+map gw cd ~/Downloads
+map gp cd ~/Pictures
+map gc cd ~/.config
+map gv cd ~/Videos
+map gm cd ~/Music
