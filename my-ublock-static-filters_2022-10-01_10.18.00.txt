@@ -1,0 +1,4 @@
+www.youtube.com##:xpath(//div[@id='mouseover-overlay'])
+www.youtube.com##ytd-video-preview
+www.youtube.com###hover-overlays
+
